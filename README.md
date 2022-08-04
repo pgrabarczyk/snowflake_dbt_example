@@ -61,9 +61,10 @@ pip install dbt-snowflake
 dbt --version
 ```
 
-## Create DBT profile file
+## Create DBT profile file & DBT project
 
 ```bash
+# https://docs.getdbt.com/docs/building-a-dbt-project/projects
 $ dbt init snowflake_dbt_example
 16:49:20  Running with dbt=1.2.0
 Which database would you like to use?
@@ -72,7 +73,7 @@ Which database would you like to use?
 (Don't see the one you want? https://docs.getdbt.com/docs/available-adapters)
 
 Enter a number: 1
-account (https://<this_value>.snowflakecomputing.com): XXXXXXXXXXXXX
+account (https://<this_value>.snowflakecomputing.com): XXXXXXX.eu-west-1
 user (dev username): pgrabarczyk
 [1] password
 [2] keypair
@@ -102,7 +103,21 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 Happy modeling!
 ```
 
+## Get inside your new DBT project & Push it to the GitHub
+```bash
+cd snowflake_dbt_example
+# Push new project to the GitHub (public project)
+```
+
 ## Check connection
 ```bash
 dbt debug
+# You should see last line equals to `All checks passed!`
 ```
+
+## First execution
+
+```bash
+dbt run
+```
+
