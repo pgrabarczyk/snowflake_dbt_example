@@ -1,4 +1,4 @@
-# snowflake-dbt-example
+# snowflake_dbt_example
 Example usage of Snowflake with dbt
 
 ## My configuration
